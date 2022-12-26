@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+
+# Byte-compiled
+__pycache__/
+ 
+# Builds / distributions
+dist/
+ 
+# Environments
+.venv
