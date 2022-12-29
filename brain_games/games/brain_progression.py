@@ -11,19 +11,21 @@ def make_question():
     step = randint(1, 5)
     next_number = first_number + step
     progression_length = 1
-    
+
     while progression_length < 10:
-           progression.append(next_number)
-           next_number += step
-           progression_length += 1
-      
+        progression.append(next_number)
+        next_number += step
+        progression_length += 1
+
     missing_element = randint(1, 8)
-    progression[missing_element] = '..' 
-    
+    progression[missing_element] = '..'
+
     return progression
-    
+
 
 def correct_answer(question):
-    missing_element = question.index('..')
-    answer = (question[missing_element - 1] + question[missing_element + 1]) / 2
-    return str(int(answer))
+    missing_elem_index = question.index('..')
+    elem_before = question[missing_elem_index - 1]
+    elem_after = question[missing_elem_index + 1]
+    missing_elem = int((elem_before + elem_after) / 2)
+    return str(missing_elem)
