@@ -1,6 +1,0 @@
-#!/home/ggbyron/python-project-lvl1/.venv/bin/python
-import sys
-from brain_games.scripts.brain_even import main
-
-if __name__ == '__main__':
-    sys.exit(main())
