@@ -21,8 +21,8 @@ def make_question():
     progression[missing_elem] = '..'
     progression = str(progression)
     progression = progression[1:-1]
-    progression = progression.replace(',',"")
-    progression = progression.replace('\'',"")
+    progression = progression.replace(',', "")
+    progression = progression.replace('\'', "")
     progression = 'Question: ' + progression
     return progression
 
