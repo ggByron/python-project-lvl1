@@ -23,6 +23,7 @@ def make_question():
     progression = progression[1:-1]
     progression = progression.replace(',',"")
     progression = progression.replace('\'',"")
+    progression = 'Question: ' + progression
     return progression
 
 
