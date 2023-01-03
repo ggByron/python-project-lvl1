@@ -17,15 +17,19 @@ def make_question():
         next_number += step
         progression_length += 1
 
-    missing_element = randint(1, 8)
-    progression[missing_element] = '..'
-
+    missing_elem = randint(1, 8)
+    progression[missing_elem] = '..'
+    progression = str(progression)
+    progression = progression[1:-1]
+    progression = progression.replace(',',"")
+    progression = progression.replace('\'',"")
     return progression
 
 
 def correct_answer(question):
-    missing_elem_index = question.index('..')
-    elem_before = question[missing_elem_index - 1]
-    elem_after = question[missing_elem_index + 1]
+    progression = list(question.split(' '))
+    missing_elem_index = progression.index('..')
+    elem_before = int(progression[missing_elem_index - 1])
+    elem_after = int(progression[missing_elem_index + 1])
     missing_elem = int((elem_before + elem_after) / 2)
     return str(missing_elem)
