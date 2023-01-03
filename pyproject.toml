@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "First Hexlet Project"
 authors = ["ggByron <shtyrbu.ya@gmail.com>"]
 readme = "README.md"
+repository = "https://github.com/ggByron/python-project-lvl1"
 packages = [
     { include = "brain_games" },
 ]
