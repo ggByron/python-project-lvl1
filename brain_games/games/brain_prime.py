@@ -15,7 +15,7 @@ def correct_answer(question):
     number = int(question[9:])
     divisor = 2
     correct_answer = 'yes'
-    while divisor <= number / 2:
+    while divisor <= number:
         if number % divisor == 0:
             correct_answer = 'no'
             return correct_answer
