@@ -1,4 +1,4 @@
-brain_games/__pycache__/
+__pycache__/
 dist/
 .venv/
 __pycache__
