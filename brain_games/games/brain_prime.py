@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
-from brain_games.engine import generate_number
+from random import randint
 
 
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def make_question():
-    number = generate_number()
+    number = randint(1, 99)
     question = f'Question: {number}'
     return question
 

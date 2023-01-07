@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.engine import generate_number
+from random import randint
 from math import gcd
 
 
@@ -7,8 +7,8 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def make_question():
-    number1 = generate_number()
-    number2 = generate_number()
+    number1 = randint(1, 25)
+    number2 = randint(1, 25)
     question = f'Question: {number1} {number2}'
     return question
 
