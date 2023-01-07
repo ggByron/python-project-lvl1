@@ -6,12 +6,12 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def make_question():
     number = randint(1, 99)
-    question = f'Question: {number}'
+    question = f'{number}'
     return question
 
 
 def correct_answer(question):
-    number = int(question[9:])
+    number = int(question)
     correct_answer = 'yes'
     if number == 1:
         correct_answer = 'no'

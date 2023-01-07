@@ -18,12 +18,11 @@ def make_question():
 
     missing_elem = randint(1, 8)
     progression[missing_elem] = '..'
-    progression = str(progression)
-    progression = progression[1:-1]
-    progression = progression.replace(',', "")
-    progression = progression.replace('\'', "")
-    progression = 'Question: ' + progression
-    return progression
+    question = str(progression)
+    question = question[1:-1]
+    question = question.replace(',', "")
+    question = question.replace('\'', "")
+    return question
 
 
 def correct_answer(question):

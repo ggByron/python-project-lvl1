@@ -10,19 +10,18 @@ def make_question():
     number1 = randint(1, 20)
     number2 = randint(1, 20)
     random_sign = choice(signs)
-    question = f'Question: {number1} {random_sign} {number2}'
+    question = f'{number1} {random_sign} {number2}'
     return question
 
 
 def correct_answer(question):
-    my_exp = question[9:]
-    if signs[0] in my_exp:
-        my_numbers = my_exp.split('+')
+    if signs[0] in question:
+        my_numbers = question.split('+')
         correct_answer = int(my_numbers[0]) + int(my_numbers[1])
-    elif signs[1] in my_exp:
-        my_numbers = my_exp.split('-')
+    elif signs[1] in question:
+        my_numbers = question.split('-')
         correct_answer = int(my_numbers[0]) - int(my_numbers[1])
     else:
-        my_numbers = my_exp.split('*')
+        my_numbers = question.split('*')
         correct_answer = int(my_numbers[0]) * int(my_numbers[1])
     return str(correct_answer)
