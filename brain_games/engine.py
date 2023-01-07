@@ -6,15 +6,13 @@ def play_game(game):
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!')
     print(game.DESCRIPTION)
-    correct_answers = 0
-    while correct_answers < 3:
+    for n in range(0, 3):
         question = game.make_question()
         print(question)
         user_answer = prompt.string()
         correct_answer = game.correct_answer(question)
         if user_answer == correct_answer:
             print('Correct!')
-            correct_answers += 1
         else:
             print(f"{user_answer} is wrong answer ;(."
                   f"Correct answer was {correct_answer}."
