@@ -8,7 +8,7 @@ def play_game(game):
     print(game.DESCRIPTION)
     for n in range(0, 3):
         question = game.make_question()
-        print(question)
+        print(f"Question: {question}")
         user_answer = prompt.string()
         correct_answer = game.correct_answer(question)
         if user_answer == correct_answer:
