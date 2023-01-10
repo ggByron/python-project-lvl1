@@ -1,15 +1,14 @@
 import prompt
 
 
-def play_game(game):
+def play(game):
     print('Welcome to the Brain Games!')
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!')
     print(game.DESCRIPTION)
-    for n in range(0, 3):
-        q_and_a = game.make_qstn_and_answer()
-        question = q_and_a[0]
-        answer = q_and_a[1]
+    ROUNDS = 3
+    for _ in range(0, ROUNDS):
+        question, answer = game.make_qstn_and_answer()
         print(f"Question: {question}")
         user_answer = prompt.string()
         if user_answer == answer:

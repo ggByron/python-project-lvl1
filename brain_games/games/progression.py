@@ -18,10 +18,8 @@ def make_qstn_and_answer():
 
     missing_elem_index = randint(1, 8)
     answer = str(progression[missing_elem_index])
-    progression[missing_elem_index] = '..'
-    question = str(progression)
-    question = question[1:-1]
-    question = question.replace(',', "")
-    question = question.replace('\'', "")
+    question = ''.join(str(progression))
+    question = question.replace(answer, '..')
+    question = question.replace(',', '')
 
     return [question, answer]
