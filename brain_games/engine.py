@@ -1,4 +1,5 @@
 import prompt
+ROUNDS_COUNT = 3
 
 
 def play(game):
@@ -6,8 +7,7 @@ def play(game):
     username = prompt.string('May I have your name? ')
     print(f'Hello, {username}!')
     print(game.DESCRIPTION)
-    ROUNDS = 3
-    for _ in range(0, ROUNDS):
+    for _ in range(0, ROUNDS_COUNT):
         question, answer = game.make_qstn_and_answer()
         print(f"Question: {question}")
         user_answer = prompt.string()

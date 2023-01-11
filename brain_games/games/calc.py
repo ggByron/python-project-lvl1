@@ -16,8 +16,7 @@ def make_qstn_and_answer():
         answer = number1 + number2
     elif random_sign == '-':
         answer = number1 - number2
-    else:
+    elif random_sign == '*':
         answer = number1 * number2
 
-    answer = str(answer)
-    return [question, answer]
+    return [question, str(answer)]

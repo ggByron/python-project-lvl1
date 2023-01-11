@@ -9,5 +9,4 @@ def make_qstn_and_answer():
     number1 = randint(1, 25)
     number2 = randint(1, 25)
     question = f'{number1} {number2}'
-    answer = str(gcd(number1, number2))
-    return [question, answer]
+    return [question, str(gcd(number1, number2))]

@@ -6,21 +6,20 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def is_prime(number):
     if number == 1:
-        return 'no'
+        return False
     elif number == 2:
-        return 'yes'
-    else:
-        divisor = 2
-        while divisor <= (number / 2 + 1):
-            if number % divisor == 0:
-                return 'no'
-            else:
-                divisor += 1
-        return 'yes'
+        return True
+    for _ in range(2, number // 2 + 1):
+        if number % _ == 0:
+            return False
+    return True
 
 
 def make_qstn_and_answer():
     number = randint(1, 99)
     question = f'{number}'
-    answer = is_prime(number)
+    if is_prime(number):
+        answer = 'yes'
+    else:
+        answer = 'no'
     return [question, answer]
